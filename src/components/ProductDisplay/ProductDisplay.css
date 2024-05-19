@@ -1,0 +1,15 @@
+.product-wool-display h1 {
+    color: var(--text-normal-color);
+    font-weight: 500;
+}
+
+.product-display-list {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    margin: 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    row-gap: 30px;
+}
