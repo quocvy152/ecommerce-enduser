@@ -4,6 +4,11 @@ import ic_basket from './ic_basket.png';
 import ic_plus from './ic_plus.png';
 import ic_plus_color from './ic_plus_color.png';
 import ic_minus_color from './ic_minus_color.png';
+import ic_ch_play from './ic_ch_play.png';
+import ic_app_store from './ic_app_store.png';
+import ic_facebook from './ic_facebook.png';
+import ic_twitter from './ic_twitter.png';
+import ic_linkedin from './ic_linkedin.png';
 
 import menu_01 from './menu_01.png';
 import menu_02 from './menu_02.png';
@@ -95,6 +100,11 @@ export const images = {
     ic_plus,
     ic_plus_color,
     ic_minus_color,
+    ic_ch_play,
+    ic_app_store,
+    ic_facebook,
+    ic_twitter,
+    ic_linkedin,
 }
 
 export const menuList = [
@@ -128,8 +138,8 @@ export const listProduct = [
     { id: 13, image: product_013, name: 'Combo móc khoá bóng thể thao', category: 'menu_08', price: 79000, description: 'Combo móc khoá bóng thể thao, phong cách và tiện dụng.' },
     { id: 14, image: product_014, name: 'Móc khoá bóng đá', category: 'menu_11', price: 30000, description: 'Móc khoá hình bóng đá, tiện lợi và độc đáo.' },
     { id: 15, image: product_015, name: 'Móc đan len vàng', category: 'menu_10', price: 15000, description: 'Móc đan len vàng chất lượng cao, dễ sử dụng.' },
-    { id: 16, image: product_016, name: 'Nón hình vịt cute', category: 'menu_07', price: 86000, description: 'Nón hình vịt dễ thương, phù hợp mọi lứa tuổi.' },
-    { id: 17, image: product_017, name: 'Nón hình hổ cute', category: 'menu_07', price: 84000, description: 'Nón hình hổ dễ thương, tinh tế và độc đáo.' },
+    { id: 16, image: product_016, name: 'Nón hình vịt cute', category: 'menu_05', price: 86000, description: 'Nón hình vịt dễ thương, phù hợp mọi lứa tuổi.' },
+    { id: 17, image: product_017, name: 'Nón hình hổ cute', category: 'menu_05', price: 84000, description: 'Nón hình hổ dễ thương, tinh tế và độc đáo.' },
     { id: 18, image: product_018, name: 'Áo len cho cún', category: 'menu_07', price: 139000, description: 'Áo len ấm áp cho cún yêu, chất lượng cao.' },
     { id: 19, image: product_019, name: 'Áo len hồng cho mèo', category: 'menu_07', price: 129000, description: 'Áo len màu hồng cho mèo, ấm áp và đáng yêu.' },
     { id: 20, image: product_020, name: 'Nón len hồng cho cún', category: 'menu_07', price: 69000, description: 'Nón len màu hồng cho cún, giữ ấm và đẹp.' },
