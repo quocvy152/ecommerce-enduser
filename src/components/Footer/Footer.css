@@ -63,23 +63,34 @@
 }
 
 .container-footer-info-company{
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.content-footer{
     background-color: var(--background-footer-color);
     margin-top: 40px;
-    padding: 60px 150px;
-    display: flex;
-    gap: 100px;
+    padding: 0 150px;
+    padding-top: 60px;
+    padding-bottom: 10px;
 }
 
-.wrap-info-about-company {
+
+.content-footer-left, .content-footer-center, .content-footer-right{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 40%;
+    gap: 30px;
 }
 
-.wrap-info-about-company .company-name{
+.list-item-info-company li, .list-item-get-in-touch li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.content-footer-left .company-name{
     color: var(--primary-color);
-    font-size: 42px;
+    font-size: 50px;
     font-weight: 500;
 }
 
@@ -89,19 +100,23 @@
     text-align: justify;
 }
 
-.wrap-company{
-    width: 30%;
-}
-
-.wrap-get-in-touch{
-    width: 30%;
-}
-
-.wrap-company h1, .wrap-get-in-touch h1{
+.content-footer-left h1, .content-footer-right h1{
     color: var(--text-normal-color);
 }
 
 .list-item-info-company, .list-item-get-in-touch{
     color: var(--text-gray1-color);
-    margin-top: 25px;
+}
+
+.footer-hr{
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+    margin: 50px 0px;
+}
+
+.footer-copy-right{
+    text-align: center;
+    padding-bottom: 30px;
+    color: var(--text-gray1-color);
 }
