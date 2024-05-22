@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../redux";
+import { useAppSelector } from "../../../src/redux/store";
 import ProductDisplayItem from "../ProductDisplayItem/ProductDisplayItem";
 import "./ProductDisplay.css";
 

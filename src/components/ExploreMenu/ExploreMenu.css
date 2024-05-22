@@ -61,3 +61,32 @@
 .explore-menu-list-item .active {
     border: 4px solid var(--primary-color);
 }
+
+@media (max-width: 1598px) {
+    .explore-menu-list{
+        padding-bottom: 10px;
+    }
+
+    .explore-menu-list-item p{
+        font-size: 14px;
+        height: 50px;
+    }
+
+    .explore-menu hr{
+        margin-bottom: 10px;
+    }
+
+    .explore-menu{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .explore-menu h1{
+        font-size: 25px;
+    }
+
+    .explore-menu-text{
+        font-size: 14px;
+    }
+}

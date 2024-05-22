@@ -10,7 +10,6 @@ export type ProductDisplayItemProps = {
 }
 
 const ProductDisplayItem = ({name, price, image, description}: ProductDisplayItemProps) => {
-  console.log("🚀 ~ ProductDisplayItem ~ ProductDisplayItem:", 'ProductDisplayItem')
   const [quantity, setQuantity] = useState(0);
 
   return (

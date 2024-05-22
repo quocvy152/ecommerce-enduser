@@ -41,3 +41,14 @@
     border-radius: 50px;
     cursor: pointer;
 }
+
+@media (max-width: 750px) {
+    .header-contents p{
+        visibility: hidden;
+    }
+
+    .header-contents h2{
+        font-weight: 500;
+        font-size: max(4vw, 18px);
+    }
+}
