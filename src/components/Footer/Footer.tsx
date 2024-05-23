@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className='container-footer'>
+    <div className='container-footer' id='mobile-app'>
         <div className='container-footer-download-app'>
             <h1>Để Có Được Trải Nghiệm Tốt Hơn Hãy Tải Ứng Dụng Của Chúng Tôi</h1>
 
@@ -26,7 +26,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="content-footer">
+        <div className="content-footer" id='content-footer'>
             <div className="container-footer-info-company">
                 <div className="content-footer-left">
                     <p className='company-name'>Viva Wool</p>

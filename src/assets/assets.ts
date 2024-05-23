@@ -9,6 +9,7 @@ import ic_app_store from './ic_app_store.png';
 import ic_facebook from './ic_facebook.png';
 import ic_twitter from './ic_twitter.png';
 import ic_linkedin from './ic_linkedin.png';
+import ic_close from './ic_close.png';
 
 import menu_01 from './menu_01.png';
 import menu_02 from './menu_02.png';
@@ -105,6 +106,7 @@ export const images = {
     ic_facebook,
     ic_twitter,
     ic_linkedin,
+    ic_close,
 }
 
 export const menuList = [

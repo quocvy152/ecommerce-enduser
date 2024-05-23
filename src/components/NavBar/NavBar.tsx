@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { images } from '../../assets/assets';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
+import { PopupLoginProps } from '../PopupLogin/PopupLogin';
 
 export type ParamChangeMenu = { value: string }
 
-const NavBar = () => {
+const NavBar = ({setShowLogin}: PopupLoginProps) => {
   const [menu, setMenu] = useState('home')
 
   const onChangeMenu = ({value}: ParamChangeMenu) => {
@@ -18,10 +20,10 @@ const NavBar = () => {
       </div>
       
       <ul className='navbar-menu'>
-        <li onClick={() => onChangeMenu({ value: 'home' })} className={menu === 'home' ? 'active' : ''}>Trang chủ</li>
-        <li onClick={() => onChangeMenu({ value: 'menu' })} className={menu === 'menu' ? 'active' : ''}>Menu</li>
-        <li onClick={() => onChangeMenu({ value: 'mobile-app' })} className={menu === 'mobile-app' ? 'active' : ''}>Mobile app</li>
-        <li onClick={() => onChangeMenu({ value: 'contact-us' })} className={menu === 'contact-us' ? 'active' : ''}>Liên hệ</li>
+        <Link to='/' onClick={() => onChangeMenu({ value: 'home' })} className={menu === 'home' ? 'active' : ''}>Trang chủ</Link>
+        <a href='#explore-menu' onClick={() => onChangeMenu({ value: 'menu' })} className={menu === 'menu' ? 'active' : ''}>Menu</a>
+        <a href='#mobile-app' onClick={() => onChangeMenu({ value: 'mobile-app' })} className={menu === 'mobile-app' ? 'active' : ''}>Mobile app</a>
+        <a href='#content-footer' onClick={() => onChangeMenu({ value: 'contact-us' })} className={menu === 'contact-us' ? 'active' : ''}>Liên hệ</a>
       </ul>
 
       <div className='navbar-right'>
@@ -32,7 +34,7 @@ const NavBar = () => {
           <div className='dot'></div>
         </div>
 
-        <button className='btn-sign-in'>Đăng nhập</button>
+        <button className='btn-sign-in' onClick={() => setShowLogin(true)}>Đăng nhập</button>
       </div>
     </div>
   );

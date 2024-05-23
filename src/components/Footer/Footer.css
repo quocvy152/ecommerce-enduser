@@ -11,7 +11,7 @@
     width: 200px;
     height: 60px;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 12px;
     gap: 10px;
     padding-left: 15px;
     cursor: pointer;
@@ -76,7 +76,6 @@
     padding-bottom: 10px;
 }
 
-
 .content-footer-left, .content-footer-center, .content-footer-right{
     display: flex;
     flex-direction: column;
@@ -100,7 +99,7 @@
     text-align: justify;
 }
 
-.content-footer-left h1, .content-footer-right h1{
+.content-footer-center h1, .content-footer-right h1{
     color: var(--text-normal-color);
 }
 
@@ -119,4 +118,43 @@
     text-align: center;
     padding-bottom: 30px;
     color: var(--text-gray1-color);
+}
+
+@media (max-width: 1044px) {
+    .container-footer-info-company{
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+
+    .content-footer-left .company-name{
+        font-size: 40px;
+    }
+
+    .content-footer-center h1, .content-footer-right h1{
+        font-size: 30px;
+    }
+    
+    .content-footer{
+        margin-top: 40px;
+        padding: 0 50px;
+        padding-top: 60px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 422px) {
+    .tooltip-btn-download{
+        font-size: 10px;
+    }
+
+    .brand-store{
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.wrap-btn-download-ch-play:hover, .wrap-btn-download-app-store:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
