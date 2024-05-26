@@ -18,6 +18,7 @@ const ProductDisplay = ({category}: ProductDisplayProps) => {
         {listProductFilter.map((product) => (
           <ProductDisplayItem
             key={product.id}
+            productID={product.id}
             name={product.name}
             price={product.price}
             image={product.image}

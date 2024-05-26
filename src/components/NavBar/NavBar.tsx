@@ -16,7 +16,9 @@ const NavBar = ({setShowLogin}: PopupLoginProps) => {
   return (
     <div className='navbar'>
       <div className='wrap-logo'>
-        <img src={images.logo} alt='' className='logo'/>
+        <Link to='/'>
+          <img src={images.logo} alt='' className='logo'/>
+        </Link>
       </div>
       
       <ul className='navbar-menu'>
@@ -29,11 +31,13 @@ const NavBar = ({setShowLogin}: PopupLoginProps) => {
       <div className='navbar-right'>
         <img src={images.ic_search} alt='' className='ic-search ic-navbar' />
 
-        <div className='navbar-search-icon'>
-          <img src={images.ic_basket} alt='' className='ic-basket ic-navbar' />
-          <div className='dot'></div>
-        </div>
-
+        <Link to={'/cart'}>
+          <div className='navbar-search-icon'>
+            <img src={images.ic_basket} alt='' className='ic-basket ic-navbar' />
+            <div className='dot'></div>
+          </div>
+        </Link>
+        
         <button className='btn-sign-in' onClick={() => setShowLogin(true)}>Đăng nhập</button>
       </div>
     </div>

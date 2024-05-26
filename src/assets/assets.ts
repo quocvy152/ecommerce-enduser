@@ -10,6 +10,7 @@ import ic_facebook from './ic_facebook.png';
 import ic_twitter from './ic_twitter.png';
 import ic_linkedin from './ic_linkedin.png';
 import ic_close from './ic_close.png';
+import ic_remove from './ic_remove.png';
 
 import menu_01 from './menu_01.png';
 import menu_02 from './menu_02.png';
@@ -107,6 +108,7 @@ export const images = {
     ic_twitter,
     ic_linkedin,
     ic_close,
+    ic_remove
 }
 
 export const menuList = [
@@ -152,4 +154,17 @@ export const listProduct = [
     { id: 25, image: product_025, name: 'Bộ len bơi màu vàng', category: 'menu_06', price: 219000, description: 'Bộ len bơi màu vàng, sang trọng và tinh tế.' },
     { id: 26, image: product_026, name: 'Bộ len bơi xanh lá mạ', category: 'menu_06', price: 209000, description: 'Bộ len bơi xanh lá mạ, phong cách và đẹp.' },
     { id: 27, image: product_027, name: 'Combo 3 chậu len hướng dương', category: 'menu_08', price: 159000, description: 'Combo 3 chậu len hướng dương, trang trí nhà cửa.' },
+]
+
+export const listCart = [
+    { id: 1, productID: 1, image: product_001, name: 'Vịt len', price: 90000, quantity: 1 },
+    { id: 2, productID: 2, image: product_002, name: 'Móc khoá hình heo', price: 30000, quantity: 2 },
+    { id: 3, productID: 3, image: product_003, name: 'Móc khoá heo đội mũ', price: 35000, quantity: 3 },
+    { id: 4, productID: 4, image: product_004, name: 'Móc khoá heo đội mũ vàng', price: 35000, quantity: 1 },
+    { id: 5, productID: 5, image: product_005, name: 'Rồng len xanh dương', price: 80000, quantity: 2 },
+    { id: 6, productID: 6, image: product_006, name: 'Rồng len xanh đỏ', price: 80000, quantity: 4 },
+    { id: 7, productID: 7, image: product_007, name: 'Cuộn len vàng', price: 14000, quantity: 1 },
+    { id: 8, productID: 8, image: product_008, name: 'Mèo len caramel', price: 34000, quantity: 2 },
+    { id: 9, productID: 9, image: product_009, name: 'Vịt đội mũ xanh', price: 60000, quantity: 1 },
+    { id: 10, productID: 10, image: product_010, name: 'Heo hồng đội mũ xanh', price: 75000, quantity: 5 },
 ]
