@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { images } from '../../assets/assets'
 import './Footer.css'
 
@@ -13,13 +14,19 @@ const Footer = () => {
                     </div>                
                     <div className="group-btn-social-company">
                         <div className="wrap-btn-facebook">
-                            <img src={images.ic_facebook} alt="" className="btn-facebook" />
+                            <Link to='https://www.facebook.com/anhvy2105'>
+                                <img src={images.ic_facebook} alt="" className="btn-facebook" />
+                            </Link>
                         </div>
                         <div className="wrap-btn-twitter">
-                            <img src={images.ic_twitter} alt="" className="btn-twitter" />
+                            <Link to='https://x.com'>
+                                <img src={images.ic_twitter} alt="" className="btn-twitter" />
+                            </Link>
                         </div>
                         <div className="wrap-btn-linkedin">
-                            <img src={images.ic_linkedin} alt="" className="btn-linkedin"></img>
+                            <Link to='https://www.linkedin.com/in/vy-pham-34b01b184'>
+                                <img src={images.ic_linkedin} alt="" className="btn-linkedin"></img>
+                            </Link>
                         </div>
                     </div>
                 </div>

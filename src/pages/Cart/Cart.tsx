@@ -1,7 +1,7 @@
 import "./Cart.css"
 import { images } from "@/assets/assets"
-import { useAppDispatch, useAppSelector } from "../../redux/store"
-import { removeItemCart } from '../../redux/carts'
+import { useAppDispatch, useAppSelector } from "@/redux/store"
+import { removeItemCart } from '@/redux/carts'
 
 const Cart = () => {
   const dispatch = useAppDispatch();

@@ -1,0 +1,28 @@
+.container-social-login{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+}
+
+.btn-login-facebook, .btn-login-google{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--text-gray1-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.img-btn-login-facebook, .img-btn-login-google{
+    width: 22px;
+}
+
+.title-signin-third-party{
+    font-size: 12px;
+}
+
+.btn-login-facebook:hover, .btn-login-google:hover{
+    box-shadow: 0px 0px 5px 4px #00000015;
+}
