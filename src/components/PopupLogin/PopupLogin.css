@@ -38,10 +38,10 @@
 }
 
 .wrap-login-input input{
-    border: none;
+    /* border: none;
     border: 1px solid var(--text-gray1-color);
-    padding: 10px 8px;
-    border-radius: 5px;
+    border-radius: 5px; */
+    padding: 14px 14px;
 }
 
 .wrap-title-popup{
