@@ -1,0 +1,20 @@
+.social-media-container{
+    margin: 100px 0px;
+}
+
+.tiktok-social-media-container{
+    display: 'flex';
+    gap: 150px;
+    margin-bottom: 100px;
+}
+
+.social-media-container hr{
+    margin: 10px 0px;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+.social-media-container h1{
+    margin-bottom: 50px;
+}
