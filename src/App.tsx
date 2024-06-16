@@ -6,6 +6,7 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import Footer from './components/Footer/Footer';
 import PopupLogin from './components/PopupLogin/PopupLogin';
 import { useState } from 'react';
+import IntroduceApp from './components/IntroduceApp/IntroduceApp';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -13,6 +14,8 @@ const App = () => {
   return (
     <div>
       {showLogin ? <PopupLogin setShowLogin={setShowLogin} /> : <></>}
+
+      <IntroduceApp />
 
       <div className='app'>
         <NavBar setShowLogin={setShowLogin}></NavBar>
