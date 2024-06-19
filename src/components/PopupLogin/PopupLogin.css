@@ -9,7 +9,7 @@
 
 .form-content-login{
     place-self: center center; /* place-self: align-celf justify-celf */
-    width: max(20vw, 300px);
+    width: max(20vw, 350px);
     background-color: white;
     padding: 25px 32px;
     border-radius: 7px;
@@ -44,9 +44,6 @@
     padding: 14px 14px;
 }
 
-.wrap-title-popup{
-}
-
 .btn-form{
     border: none;
     background-color: var(--primary-color);
@@ -72,4 +69,15 @@
 
 .form-content-login span{
     color: var(--primary-color);
+    cursor: pointer;
+}
+
+.wrap-input{
+    width: 100%;
+    height: 65px;
+}
+
+.text-field-custom{
+    width: 100%;
+    height: 100%;
 }

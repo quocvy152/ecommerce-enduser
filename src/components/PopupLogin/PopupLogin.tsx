@@ -1,9 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
-import { Dispatch, SetStateAction, useState } from 'react';
-import './PopupLogin.css';
-import { images } from '../../assets/assets';
-import SocialLogin from '../SocialLogin/SocialLogin';
-import { TextField } from '@mui/material';
+import { Dispatch, SetStateAction, useState } from "react";
+import { TextField } from "@mui/material";
+
+import "./PopupLogin.css";
+import { images } from "../../assets/assets";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 export type PopupLoginProps = {
   setShowLogin: Dispatch<SetStateAction<boolean>>;
@@ -34,51 +35,40 @@ const PopupLogin = ({ setShowLogin }: PopupLoginProps) => {
 
         <div className="wrap-login-input">
           {popupType === "signup" ? (
-            // <input
-            //   type="text"
-            //   name="txt_fullname"
-            //   id="txt_fullname"
-            //   placeholder="Tên của bạn"
-            //   required
-            // />
             <TextField
-              id='txt_fullname'
-              label='Tên của bạn'
-              defaultValue=''
-              helperText='Incorrect entry.'
+              id="txt_fullname"
+              label="Tên của bạn"
+              defaultValue=""
+              helperText="Incorrect entry."
             />
           ) : (
             <></>
           )}
-          {/* <input
-            type="text"
-            name="txt_username"
-            id="txt_username"
-            placeholder="Địa chỉ email/username"
-            required
-          /> */}
-          <TextField
-            id='txt_username'
-            label='Email/username'
-            defaultValue=''
-            helperText='Incorrect entry.'
-          />
-          {/* <input
-            type="password"
-            name="txt_password"
-            id="txt_password"
-            placeholder="Mật khẩu của bạn"
-            required
-          /> */}
-          <TextField
-            id='txt_password'
-            label='Mật khẩu'
-            defaultValue=''
-            helperText='Incorrect entry.'
-          />
+          <div className="wrap-input">
+            <TextField
+              id="txt_username"
+              label="Email/username"
+              defaultValue=""
+              helperText="Incorrect entry."
+              className="text-field-custom"
+            />
+          </div>
+          <div className="wrap-input">
+            <TextField
+              id="txt_password"
+              label="Mật khẩu"
+              defaultValue=""
+              helperText="Incorrect entry."
+              className="text-field-custom"
+            />
+          </div>
         </div>
 
-        <SocialLogin popupType={popupType} />
+        {popupType === POPUP_TYPE.SIGNIN ? (
+          <SocialLogin popupType={popupType} />
+        ) : (
+          <></>
+        )}
 
         <button className="btn-form">
           {popupType === POPUP_TYPE.SIGNIN ? "Đăng nhập" : "Tạo tài khoản"}
