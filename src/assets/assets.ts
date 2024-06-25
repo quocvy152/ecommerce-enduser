@@ -57,6 +57,13 @@ import product_027 from './product_027.png';
 
 import ic_rating from './ic_rating.png';
 
+import ic_loading_gif from './ic_loading_gif.gif';
+
+import ic_user_01 from './ic_user_01.png';
+import ic_user_02 from './ic_user_02.png';
+import ic_user_03 from './ic_user_03.png'; 
+import ic_user_default from './ic_user_default.png'; 
+
 export const images = {
     logo,
     ic_search,
@@ -113,6 +120,11 @@ export const images = {
     ic_remove,
     ic_facebook_signin,
     ic_google,
+    ic_loading_gif,
+    ic_user_01,
+    ic_user_02,
+    ic_user_03,
+    ic_user_default
 }
 
 export const menuList = [

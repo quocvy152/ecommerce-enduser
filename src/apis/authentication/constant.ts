@@ -1,4 +1,4 @@
-const BASE_MODULE = '/auth';
+const BASE_MODULE = '/users';
 
 export const AUTH_URL = {
     SIGN_UP_CUSTOMER: `${BASE_MODULE}/signup`,

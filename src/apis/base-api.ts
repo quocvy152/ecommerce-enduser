@@ -2,7 +2,7 @@ import Axios from "axios";
 import { BASE_URL } from "./constant";
 
 const API = Axios.create({
-  baseURL: BASE_URL.PRODUCTION,
+  baseURL: BASE_URL.STAGING,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",

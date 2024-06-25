@@ -3,11 +3,20 @@ import { images } from '../../assets/assets';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
 import { PopupLoginProps } from '../PopupLogin/PopupLogin';
+import NavBarCustomer from '../NavBarCustomer/NavBarCustomer';
+import { useAuth } from '@/services/hooks/useAuth';
 
 export type ParamChangeMenu = { value: string }
 
-const NavBar = ({setShowLogin}: PopupLoginProps) => {
-  const [menu, setMenu] = useState('home')
+export type NavBarProps = {
+} & PopupLoginProps;
+
+const NavBar = ({
+  setShowLogin
+}: NavBarProps) => {
+  const [menu, setMenu] = useState('home');
+
+  const { hasAuthenticated } = useAuth();
 
   const onChangeMenu = ({value}: ParamChangeMenu) => {
     setMenu(value)
@@ -38,7 +47,11 @@ const NavBar = ({setShowLogin}: PopupLoginProps) => {
           </div>
         </Link>
         
-        <button className='btn-sign-in' onClick={() => setShowLogin(true)}>Đăng nhập</button>
+        {
+          hasAuthenticated ?
+          <NavBarCustomer /> :
+          <button className='btn-sign-in' onClick={() => setShowLogin(true)}>Đăng nhập</button>
+        }
       </div>
     </div>
   );

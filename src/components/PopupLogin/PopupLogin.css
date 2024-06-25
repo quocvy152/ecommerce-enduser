@@ -50,6 +50,11 @@
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .login-popup-condition{
@@ -72,12 +77,17 @@
     cursor: pointer;
 }
 
-.wrap-input{
-    width: 100%;
-    height: 65px;
+.form-content-login span{
+    color: var(--primary-color);
+    cursor: pointer;
 }
 
 .text-field-custom{
     width: 100%;
     height: 100%;
+}
+
+.ic_loading{
+    width: 15px;
+    height: 15px;
 }

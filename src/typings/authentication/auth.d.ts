@@ -31,7 +31,7 @@ export type SignInPayload = {
 }
 
 export type SignInData = {
-    data: {
+    data?: {
         Users
     },
     accessToken?: string,
