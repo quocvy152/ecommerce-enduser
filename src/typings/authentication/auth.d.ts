@@ -25,25 +25,23 @@ export type SignUpPayload = {
     roles: Roles[];
 }
 
-export type SignInPayload = {
+export type SignInPayload<T = onject> = {
     email: string;
     password: string;
-}
+} & T;
 
 export type SignInData = {
-    data?: {
-        Users
-    },
-    accessToken?: string,
-    refreshToken?: string,
+    data?: Users | null,
+    accessToken?: string | undefined,
+    refreshToken?: string | undefined,
 };
 
 export type SignInResponse = APIResponse<SignInData>;
 
 export type AuthPayload = {
-    accessToken: string;
-    refreshToken: string;
-    user: Users | null;
+    accessToken?: string | null;
+    refreshToken?: string | null;
+    user?: Users | null;
 }
 
 export type AuthState = {

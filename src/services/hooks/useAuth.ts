@@ -3,8 +3,8 @@ import { toast } from "react-toastify";
 
 import AuthenticationRepository from "@/apis/authentication";
 import { SignInPayload } from "@/typings/authentication/auth";
-// import { useAppDispatch } from "@/redux/store";
-// import { signIn as signInReducer } from "@/redux/auth";
+import { useAppDispatch } from "@/redux/store";
+import { signIn as signInReducer } from "@/redux/auth";
 
 export type UseAuth = {
     isLoading: boolean;
@@ -15,7 +15,7 @@ export type UseAuth = {
 }
 
 export const useAuth = (): UseAuth => {
-    // const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch();
 
     const { mutateAsync: signInMutateAsync, isPending: isPendingSignIn, isError: isErrorSignIn } = useMutation({
         mutationFn: async (payload: SignInPayload) => {
@@ -31,26 +31,29 @@ export const useAuth = (): UseAuth => {
 
     const signIn = async (payload: SignInPayload) => {
         try {
-            const { error, message, data, } = await signInMutateAsync(payload);
-            console.log('_______LOG_signInMutateAsync_RESPONSE: ', { error, message, data })
+            const { error, data, accessToken, refreshToken, message } = await signInMutateAsync(payload);
+
+            const { setShowLogin } = payload;
 
             if (error) {
                 toast.error(message);
             }
 
-            toast.success('Đăng nhập thành công!');
-
             localStorage.setItem('currentUser', JSON.stringify('info-user'));
             localStorage.setItem('accessToken', JSON.stringify('access-token'));
             localStorage.setItem('refreshToken', JSON.stringify('refresh-token'));
 
-            // const { } = data;
+            dispatch(
+                signInReducer({
+                    accessToken,
+                    refreshToken,
+                    user: data
+                })
+            )
 
-            // dispatch(
-            //     signInReducer({
+            setShowLogin(false);
 
-            //     })
-            // )
+            toast.success('Đăng nhập thành công!');
         } catch (error: any) {
             console.log({ error })
         }

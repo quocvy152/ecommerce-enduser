@@ -9,28 +9,28 @@ const TiktokSocialCopy = () => {
       <div className='tiktok-social-media-container'>
         <div className='tiktok-social-media-item'>
           <TikTokEmbed
-            url='https://www.tiktok.com/@vananh99915/video/7333462622915857665'
+            url='https://www.tiktok.com/@vivawoolshop/video/7385787964187495696?lang=vi-VN'
             width={325}
             height={725}
           />
         </div>
         <div className='tiktok-social-media-item'>
           <TikTokEmbed
-            url='https://www.tiktok.com/@vananh99915/video/7372567362106559760'
+            url='https://www.tiktok.com/@vananh99915/video/7372567362106559760?lang=vi-VN'
             width={325}
             height={725}
           />
         </div>
         <div className='tiktok-social-media-item'>
           <TikTokEmbed
-            url='https://www.tiktok.com/@vananh99915/video/7362872595408096528'
+            url='https://www.tiktok.com/@vananh99915/video/7362872595408096528?lang=vi-VN'
             width={325}
             height={725}
           />
         </div>
         <div className='tiktok-social-media-item'>
           <TikTokEmbed
-            url='https://www.tiktok.com/@vananh99915/video/7204065965015846170'
+            url='https://www.tiktok.com/@vananh99915/video/7204065965015846170?lang=vi-VN'
             width={325}
             height={725}
           />

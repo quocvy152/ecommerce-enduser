@@ -15,9 +15,9 @@ const authSlice = createSlice({
         signIn: (state, action: PayloadAction<AuthPayload>): AuthState => {
             return {
                 ...state,
-                accessToken: action.payload.accessToken,
-                refreshToken: action.payload.refreshToken,
-                user: action.payload.user,
+                accessToken: action.payload.accessToken || null,
+                refreshToken: action.payload.refreshToken || null,
+                user: action.payload.user || null,
                 hasAuthenticated: true
             }
         },

@@ -18,9 +18,6 @@ const AuthenticationRepository = {
       `${AUTH_URL.SIGN_IN_CUSTOMER}`,
       payload
     );
-    console.log({
-      '_____resultSignIn: ': resultSignIn
-    })
     return resultSignIn.data;
   },
 };
