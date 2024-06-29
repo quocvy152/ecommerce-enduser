@@ -1,8 +1,10 @@
 import { useMutation } from "@tanstack/react-query";
+import { toast } from "react-toastify";
 
 import AuthenticationRepository from "@/apis/authentication";
 import { SignInPayload } from "@/typings/authentication/auth";
-import { toast } from "react-toastify";
+// import { useAppDispatch } from "@/redux/store";
+// import { signIn as signInReducer } from "@/redux/auth";
 
 export type UseAuth = {
     isLoading: boolean;
@@ -13,6 +15,8 @@ export type UseAuth = {
 }
 
 export const useAuth = (): UseAuth => {
+    // const dispatch = useAppDispatch();
+
     const { mutateAsync: signInMutateAsync, isPending: isPendingSignIn, isError: isErrorSignIn } = useMutation({
         mutationFn: async (payload: SignInPayload) => {
             const resultSignIn = await AuthenticationRepository.signIn(payload);
@@ -28,7 +32,7 @@ export const useAuth = (): UseAuth => {
     const signIn = async (payload: SignInPayload) => {
         try {
             const { error, message, data, } = await signInMutateAsync(payload);
-            console.log({ error, message, data })
+            console.log('_______LOG_signInMutateAsync_RESPONSE: ', { error, message, data })
 
             if (error) {
                 toast.error(message);
@@ -39,6 +43,14 @@ export const useAuth = (): UseAuth => {
             localStorage.setItem('currentUser', JSON.stringify('info-user'));
             localStorage.setItem('accessToken', JSON.stringify('access-token'));
             localStorage.setItem('refreshToken', JSON.stringify('refresh-token'));
+
+            // const { } = data;
+
+            // dispatch(
+            //     signInReducer({
+
+            //     })
+            // )
         } catch (error: any) {
             console.log({ error })
         }
@@ -57,9 +69,9 @@ export const useAuth = (): UseAuth => {
     return {
         isLoading: isPendingSignIn,
         isError: isErrorSignIn,
-        hasAuthenticated: 
-            !!localStorage.getItem('currentUser') || 
-            !!localStorage.getItem('accessToken') || 
+        hasAuthenticated:
+            !!localStorage.getItem('currentUser') ||
+            !!localStorage.getItem('accessToken') ||
             !!localStorage.getItem('refreshToken'),
         signIn,
         signOut,

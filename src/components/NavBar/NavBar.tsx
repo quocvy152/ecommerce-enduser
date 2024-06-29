@@ -4,7 +4,8 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 import { PopupLoginProps } from '../PopupLogin/PopupLogin';
 import NavBarCustomer from '../NavBarCustomer/NavBarCustomer';
-import { useAuth } from '@/services/hooks/useAuth';
+import { useAppSelector } from '@/redux/store';
+// import { useAuth } from '@/services/hooks/useAuth';
 
 export type ParamChangeMenu = { value: string }
 
@@ -16,7 +17,8 @@ const NavBar = ({
 }: NavBarProps) => {
   const [menu, setMenu] = useState('home');
 
-  const { hasAuthenticated } = useAuth();
+  // const { hasAuthenticated } = useAuth();
+  const { hasAuthenticated } = useAppSelector((state) => state.auth);
 
   const onChangeMenu = ({value}: ParamChangeMenu) => {
     setMenu(value)

@@ -39,3 +39,16 @@ export type SignInData = {
 };
 
 export type SignInResponse = APIResponse<SignInData>;
+
+export type AuthPayload = {
+    accessToken: string;
+    refreshToken: string;
+    user: Users | null;
+}
+
+export type AuthState = {
+    hasAuthenticated: boolean,
+    accessToken: string | null;
+    refreshToken: string | null;
+    user: Users | null;
+}
